@@ -70,5 +70,7 @@ it would be in an enterprise environment. Simply run it from your IDE or via Mav
  mvn spring-boot:run
 ```
 
-2021-02-27 22:52:51.424  INFO 94491 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-02-27 22:52:51.935  WARN 94491 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Once the application is up and running, you can check is working properly by sending a simple HTTP GET request to the
+following endpoint:
+
+```http://localhost:8080/api/v1/users/1```
