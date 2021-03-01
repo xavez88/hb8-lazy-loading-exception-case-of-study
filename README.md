@@ -74,3 +74,9 @@ Once the application is up and running, you can check is working properly by sen
 following endpoint:
 
 ```http://localhost:8080/api/v1/users/1```
+
+#Case of Study
+
+According to documentation, Hibernate's LazyInitializationException occurs when
+there is an attempt to access a not-yet-fetched data outside of the session context.
+For example, when a collection is accessed after the session is closed.
