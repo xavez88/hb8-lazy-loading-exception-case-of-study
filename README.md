@@ -75,7 +75,7 @@ following endpoint:
 
 ```http://localhost:8080/api/v1/users/1```
 
-#Case of Study
+# Case of Study
 
 According to documentation, Hibernate's LazyInitializationException occurs when
 there is an attempt to access a not-yet-fetched data outside of the session context.
