@@ -100,3 +100,6 @@ In order to force the LazyLoadingException in the example application, you can e
 
 - Checkout to ```scenario/open-in-view-disabled``` branch.
 - Set ```spring.jpa.open-in-view=false``` in properties file.
+
+Once you have made the change, run the Spring Boot application and send a GET request to users' endpoint
+(localhost:8080/api/v1/users). The following error should pop up in the console:
