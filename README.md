@@ -108,3 +108,9 @@ Once you have made the change, run the Spring Boot application and send a GET re
 2021-03-20 23:33:41.691  WARN 53662 --- [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : 
 Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: failed to lazily initialize a collection of role: usr.ach.lazyloading.model.User.orders, could not initialize proxy - no Session; nested exception is 
 com.fasterxml.jackson.databind.JsonMappingException: failed to lazily initialize a collection of role: usr.ach.lazyloading.model.User.orders, could not initialize proxy - no Session (through reference chain: java.util.ArrayList[0]->usr.ach.lazyloading.model.User["orders"])]```
+
+## Possible fixes for LazyLoadingException
+
+### JOIN FETCH
+
+### The other one
