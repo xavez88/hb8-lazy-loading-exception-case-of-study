@@ -104,10 +104,12 @@ In order to force the LazyLoadingException in the example application, you can e
 Once you have made the change, run the Spring Boot application and send a GET request to users' endpoint
 (localhost:8080/api/v1/users). The following error should pop up in the console:
 
-```2021-03-20 23:33:41.526 DEBUG 53662 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: usr.ach (truncated)...]
+``` shell
+2021-03-20 23:33:41.526 DEBUG 53662 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: usr.ach (truncated)...]
 2021-03-20 23:33:41.691  WARN 53662 --- [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : 
 Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: failed to lazily initialize a collection of role: usr.ach.lazyloading.model.User.orders, could not initialize proxy - no Session; nested exception is 
-com.fasterxml.jackson.databind.JsonMappingException: failed to lazily initialize a collection of role: usr.ach.lazyloading.model.User.orders, could not initialize proxy - no Session (through reference chain: java.util.ArrayList[0]->usr.ach.lazyloading.model.User["orders"])]```
+com.fasterxml.jackson.databind.JsonMappingException: failed to lazily initialize a collection of role: usr.ach.lazyloading.model.User.orders, could not initialize proxy - no Session (through reference chain: java.util.ArrayList[0]->usr.ach.lazyloading.model.User["orders"])]
+```
 
 ## Possible fixes for LazyLoadingException
 
