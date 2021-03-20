@@ -80,3 +80,23 @@ following endpoint:
 According to documentation, Hibernate's LazyInitializationException occurs when
 there is an attempt to access a not-yet-fetched data outside of the session context.
 For example, when a collection is accessed after the session is closed.
+
+In the application we are going to use to illustrate this case of study we are going
+to use Spring Boot to simplify configuration and launching processes.
+
+## Open-In-View enabled by default in Spring Data JPA
+
+**It is important to note that Spring Data JPA default configuration for spring.jpa.open-in-view is TRUE**.
+In essence, this configuration makes Spring to open a new Hibernate session at the beginning of each request, and keeps it open
+until the request is completed. The following readings can be useful to deeply understand the
+Open In View Session(OSIV) patterns:
+
+- https://www.baeldung.com/spring-open-session-in-view
+- https://stackoverflow.com/questions/30549489/what-is-this-spring-jpa-open-in-view-true-property-in-spring-boot
+
+## Force the LazyLoadingException
+
+In order to force the LazyLoadingException in the example application, you can either:
+
+- Checkout to ```scenario/open-in-view-disabled``` branch.
+- Set ```spring.jpa.open-in-view=false``` in properties file.
